@@ -1,6 +1,6 @@
 let { defineSupportCode } = require('cucumber');
 defineSupportCode(function ({ Given, Then }) {
-  
+
   let github = browser.pages.Github;
 
   Given('I go to github', function () {
@@ -11,4 +11,5 @@ defineSupportCode(function ({ Given, Then }) {
     return this.expect(github.headerLogo.isDisplayed())
     .to.eventually.equal(true);
   });
+
 });

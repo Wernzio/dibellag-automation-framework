@@ -5,7 +5,6 @@ defineSupportCode(function ({ After }) {
   After(function (testCase) {
     if (testCase.result.status === Status.FAILED) {
         // Attaching screenshot
-        writeJsonObject(this.attach, testCase);
         return writeScreenShot(this.attach);
     }
   });
